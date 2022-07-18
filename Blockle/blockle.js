@@ -144,7 +144,7 @@ function play() {
 }
 function share() {
     var outof = "X";
-    if ((guesscount < 10) && (win == 1)) {
+    if ((guesscount <= 10) && (win == 1)) {
         outof = guesscount;
     }
     let sharetxt = "Blockle " + outof + "/10\n";
