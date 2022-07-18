@@ -1,6 +1,7 @@
 let guesscount = 0;
 let arraynum = random(0,898); //898
 let endgame = 0;
+let win = 0;
 let sharehint = [];
 
 
@@ -126,6 +127,7 @@ function end(mode) {
         statstext.innerHTML = "You got the block in " + guesscount + " guesses!";
         document.getElementById("winuioverlay").dataset.reveal = "1";
         document.getElementById("winui").dataset.reveal = "1";
+        win = 1;
     } else {
         statstext.innerHTML = "Better luck next time... (Block: " + block + " )";
         document.getElementById("winuioverlay").dataset.reveal = "1";
@@ -141,11 +143,9 @@ function play() {
     document.getElementById("tutorialui").dataset.reveal = "0";
 }
 function share() {
-    var outof;
-    if (guesscount < 10) {
+    var outof = "X";
+    if ((guesscount < 10) && (win == 1)) {
         outof = guesscount;
-    } else {
-        outof = "X";
     }
     let sharetxt = "Blockle " + outof + "/10\n";
     for (i = 0; i < sharehint.length; i++) {
