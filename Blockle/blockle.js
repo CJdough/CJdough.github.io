@@ -151,6 +151,7 @@ function share() {
     for (i = 0; i < sharehint.length; i++) {
         sharetxt = sharetxt + "\n" + sharehint[i];
     }
+    sharetxt = sharetxt + "\nhttps://cjdough.github.io/blockle";
     navigator.clipboard.writeText(sharetxt);
 }
 
