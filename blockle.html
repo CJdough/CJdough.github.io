@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="icon" href="Blockle/Logo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="Blockle/blockle.css">
+        <script src="Blockle/blockle.js"></script>
+        <title>Blockle</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="Blockle/LogoText.png" alt="Blockle" class="logo">
+        </div>
+        <div class="howtoplay" id="test">
+            <p id="testt">Try to guess the block in 10 or less guesses!</p>
+        </div>
+        <div class="guesses">
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg1" alt="e" class="icon">
+                <p id="TEXTg1"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg2" alt="e" class="icon">
+                <p id="TEXTg2"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg3" alt="e" class="icon">
+                <p id="TEXTg3"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg4" alt="e" class="icon">
+                <p id="TEXTg4"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg5" alt="e" class="icon">
+                <p id="TEXTg5"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg6" alt="e" class="icon">
+                <p id="TEXTg6"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg7" alt="e" class="icon">
+                <p id="TEXTg7"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg8"alt="e" class="icon">
+                <p id="TEXTg8"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg9" alt="e" class="icon">
+                <p id="TEXTg9"></p>
+            </div>
+            <div class="guess">
+                <img src="Blockle/nothing.png" id="IMGg10"alt="e" class="icon">
+                <p id="TEXTg10"></p>
+            </div>
+        </div>
+        <div class="stats" id="winuioverlay" data-reveal="0">
+            <div class="stats-window" id="winui" data-reveal="0">
+                <h1 class="stats-title">Statistics</h1>
+                <p id="wintext">...</p>
+                <div class="stats-options">
+                    <button class="stats-option" data-button="close" onclick="closestats()">
+                      <span class="material-icons">
+                        <img src="Blockle/close.png" class="closeimg">
+                      </span>
+                    </button>
+                    <button class="stats-option" data-button="share" onclick="share()">
+                      <span class="material-icons" id="sharespan">
+                        <img src="Blockle/share.png" class="shareimg">
+                      </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="tutorial" id="tutorialuioverlay" data-reveal="1">
+            <div class="tutorial-window" id="tutorialui" data-reveal="1">
+              <h1 class="tutorial-title">How to Play</h1>
+              <div class="tutorialrow"><p class="tutorialtext"> Try to guess the block by the block ID.</p> </div>
+              <div class="tutorialrow"><p class="tutorialtext"> Put the ID of the block in the text box.</p> </div>
+              <div class="tutorialrow"><p class="tutorialtext"> You'll get hints to help you:</p> </div>
+              <div class="tutorialrow"><p class="tutorialtext"> ⬛ Means the block does not contain any of correct words.</p> </div>
+              <div class="tutorialrow"><p class="tutorialtext"> 🟨 Means the block contains at least one correct word.</p> </div>
+              <div class="tutorialrow"><p class="tutorialtext"> For example: "stone_slab" and "mossy_stone_bricks" </p> </div>
+              <div class="tutorialrow"><p class="tutorialtext"> 🟩 Means the block is correct.</p> </div>
+
+
+
+              <div class="tutorials-options">
+                <button class="stats-option" data-button="close">
+                  <span class="material-icons" onclick="play()">
+                    <img src="Blockle/close.png" class="closeimg">
+                  </span>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="choice">
+            <p class="mc" id="label">
+                    minecraft:
+            </p>
+            <form>
+                <input type="text" id="guesser" autocomplete="off" autofocus name="guesser" class="form-control form-control-lg w-25" placeholder="block_id">
+                <button type="submit" class="m-3 btn btn-primary"><strong>Submit</strong></button>
+            </form>
+            <script>
+                document.querySelector('form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (endgame == 0) {
+                        getchoice();
+                    }
+                });
+            </script>
+        </div>
+    </body>
+</html>
