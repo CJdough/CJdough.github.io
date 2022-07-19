@@ -98,10 +98,22 @@ body {
     }
 
     to {
-      margin-left: 0px;
+      margin-top: 0px;
       opacity: 1;
     }
 }
+@keyframes slideout {
+    from {
+      margin-top: 0px;
+      opacity: 1;
+    }
+
+    to {
+      margin-top: 25px;
+      opacity: 1;
+    }
+}
+
 .closeimg {
     width: 13px;
     height: 13px;
@@ -170,16 +182,15 @@ body {
     background-color: var(--bg);
     transition: background-color 2s;
     text-align: center;
-    animation: zoom;
-    animation-duration: 0.25s;
+    animation-name: slideout;
+    animation-duration: 1s;
     pointer-events: none;
     opacity: 0;
-    transform: scaleY(0);
-    transition: opacity 0.25s, transform 0.25s;
 }
 .stats-window[data-reveal="1"] {
     opacity: 1;
-    transform: scaleY(1);
+    animation-duration: 1s;
+    animation-name: slidein;
     pointer-events: auto;
 }
 .stats-numbers {
@@ -303,18 +314,16 @@ body {
     background-color: var(--bg);
     transition: background-color 2s;
     text-align: center;
-    animation: zoom;
-    animation-duration: 0.25s;
+    animation-name: slideout;
+    animation-duration: 1s;
     pointer-events: none;
     opacity: 0;
-    transform: scaleY(0);
-    transition: opacity 0.25s, transform 0.25s;
 }
 .tutorial-window[data-reveal="1"] {
     opacity: 1;
-    transform: scaleY(1);
+    animation-name: slidein;
+    animation-duration: 1s;
     pointer-events: auto;
-    transition: opacity 0.25s, transform 0.25s;
 }
 .tutorial-title {
     font-weight: 700;
