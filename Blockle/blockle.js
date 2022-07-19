@@ -117,6 +117,7 @@ function check(choice)
 
 function getchoice() {
     found = document.getElementById("guesser").value;
+    found = found.toLowerCase();
     check(found);
 }
 
