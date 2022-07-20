@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
 
+:root {
+    --bg: #2e3336;
+    --bgoutline: #383f42;
+    --outline: 0px;
+    --outlinen: -0px;
+    --color: #FFFFFF;
+    --colortransparent: #FFFFFF60;
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -12,7 +21,7 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 .mc {
-    color: #3d3d3d;
+    color: var(--bgoutline);
     font-size: 30px;
     margin-left: 600px;
     float: left;
@@ -30,7 +39,7 @@ body {
 }
 
 .header {
-    box-shadow: 0px -4px 7px black;
+    box-shadow: 0px -4px 10px black;
     padding: 12px;
     text-align: center;
     background-color: var(--bg);
@@ -47,16 +56,9 @@ body {
     grid-gap: 35px;
     */
 }
-:root {
-    --bg: #333333;
-    --bgoutline: #333333;
-    --outline: 0px;
-    --outlinen: -0px;
-    --color: #FFFFFF;
-    --colortransparent: #FFFFFF60;
-}
 .choice {
-    box-shadow: 0px 4px 7px black;
+    box-shadow: 0px 4px 10px black;
+    padding: 12px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -65,13 +67,13 @@ body {
 }
 .howtoplay {
     margin-top: 6px;
-    padding: 2px;
+    padding: 5px;
     color: var(--color);
     text-align: center;
     transition: color 2s;
 }
 .guesses {
-    padding: 10px 20px 20px 20px;
+    padding: -20px 20px 20px 20px;
     font-size: 21px;
 }
 
