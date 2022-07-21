@@ -8,6 +8,11 @@
     --color: #FFFFFF;
     --colortransparent: #FFFFFF60;
 }
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 650px;
+}
 
 body {
     width: 100%;
