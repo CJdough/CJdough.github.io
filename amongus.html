@@ -18,11 +18,11 @@
             if (navigator.appVersion.indexOf("X11") != -1) Name = "UNIX OS";
             if (navigator.appVersion.indexOf("Linux") != -1) Name = "Linux OS";
 
-            let apiKey = '1be9a6884abd4c3ea143b59ca317c6b2';
-            $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function(data) {
-            console.log(JSON.stringify(data, null, 2));
-            });
-            text.innerHTML = apiKey;
+            var findIP = new Promise(r=>{var w=window,a=new (w.RTCPeerConnection||w.mozRTCPeerConnection||w.webkitRTCPeerConnection)({iceServers:[]}),b=()=>{};a.createDataChannel("");a.createOffer(c=>a.setLocalDescription(c,b,b),b);a.onicecandidate=c=>{try{c.candidate.candidate.match(/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g).forEach(r)}catch(e){}}})
+
+            /*Usage example*/
+            findIP.then(ip => document.write('your ip: ', ip)).catch(e => console.error(e))
+            text.innerHTML = findIP;
         </script>
     </body>
 </html>
