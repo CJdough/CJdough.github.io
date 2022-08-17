@@ -17,19 +17,6 @@
             if (navigator.appVersion.indexOf("Mac") != -1) Name = "MacOS";
             if (navigator.appVersion.indexOf("X11") != -1) Name = "UNIX OS";
             if (navigator.appVersion.indexOf("Linux") != -1) Name = "Linux OS";
-            var x = document.getElementById("amog");
-            function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-            }
-
-            function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-            }
         </script>
     </body>
 </html>
