@@ -17,7 +17,7 @@ body {
     overflow: hidden;
     transition: background-color 2s, color 2s;
 
-    background-image: url("https://i.pinimg.com/736x/b4/98/ab/b498ab2bce098940cc1fe7664ce5c482.jpg");
+    background-image: "minecraft.jpg";
 }
 .mc {
     color: var(--bgoutline);
