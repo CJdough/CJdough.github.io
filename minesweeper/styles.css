@@ -48,7 +48,7 @@
   }
   
   .board > [data-status="mine"] {
-    background-color: red;
+    background-color: rgb(204, 77, 77);
   }
   
   .board > [data-status="number"] {
