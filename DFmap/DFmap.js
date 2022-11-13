@@ -1,6 +1,11 @@
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
-
-
-console.log("test")
-para = document.getElementById("test")
-para.innerText = "This is a paragraph";
+var image = getParameterByName('image');
+window.location.replace("https://cjdough.github.io/DFmap/" + image);
