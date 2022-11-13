@@ -8,4 +8,4 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 var image = getParameterByName('image');
-window.location.replace("https://cjdough.github.io/DFmap/" + image);
+location.href = "https://cjdough.github.io/DFmap/" + image
