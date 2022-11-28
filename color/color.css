@@ -185,6 +185,7 @@ input[type=text]:focus {
     margin-left: 5px;
     bottom: 6px;
     font-size: clamp(50%, 2.5vw, 100%);
+    color: #FFFFFF;
 
     user-select: none;
     -moz-user-select: none;
