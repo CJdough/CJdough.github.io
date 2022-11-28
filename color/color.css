@@ -1,0 +1,203 @@
+:root {
+    --color: #FF0000;
+    --dark: #FF0000;
+    --light: #FF0000;
+}
+
+body {
+    margin-top: 15%;
+    font-family: helvetica,sans-serif;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    left:45%;
+    top:45%;
+
+}
+.s0 {
+    background-color: var(--light);
+}
+.s1 {
+    background-color: var(--color);
+}
+.s2 {
+    background-color: var(--dark);
+}
+
+.hextext {
+    font-style: italic;
+    top: 60px;
+    left:45%;
+    top:53%;
+}
+.rgbtext {
+    font-style: italic;
+    top: 60px;
+    left:45%;
+    top:55%;
+}
+@keyframes slidein {
+    from {
+        margin-top: 25px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+
+.disp {
+    display: flex;
+    justify-content: space-evenly;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+.button {
+    color: gray;
+    border: 5px solid gray;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 35px;
+    margin-top: 15%;
+    transition: transform .2s;
+}
+.button:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+input[type=text] {
+    width:50px;
+    border: 2px solid gray;
+    border-radius: 5%;
+}
+input[type=text]:focus {
+    width:50px;
+    border: 2px solid gray;
+    border-radius: 5%;
+}
+
+.slidecontainer {
+    margin-top:50px;
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    border-radius:50px;
+    width: 50%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-left: 25%;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #959cab;
+    cursor: pointer;
+    border-radius:50%;
+
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #959cab;
+    cursor: pointer;
+}
+.help {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000aa;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.help[data-reveal="1"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000aa;
+    z-index: 3;
+    opacity: 1;
+    display: flex;
+    pointer-events:auto;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+.help-window {
+    padding: 24px;
+    border-radius: 10px;
+    background-color: var(--bg);
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+}
+.help-window[data-reveal="1"] {
+    background-color: #454545;ol
+    color:#ffffff;
+    opacity: 1;
+    pointer-events: auto;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+.help-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.tutorialrow {
+    text-align:left;
+}
+.tutorialtext {
+    display:flex;
+    justify-content: space-evenly;
+    position: relative;
+    padding:0;
+    margin-left: 5px;
+    bottom: 6px;
+    font-size: clamp(50%, 2.5vw, 100%);
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.tutorial-options {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    grid-gap: 35px;
+}
+.bold {
+    font-weight: 600;
+}​

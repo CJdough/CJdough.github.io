@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="color/color.css">
+        <script src="color/color.js"></script>
+        <title>
+            test
+        </title>
+    </head>
+    <body>
+        <div class="disp">
+            <div class="square s0" id="square0" onclick="changecolor()"></div>
+            <div class="square s1" id="square1" onclick="changecolor()"></div>
+            <div class="square s2" id="square2" onclick="changecolor()"></div>
+        </div>
+        <div class="disp">
+            <div class="hextext" id="hextext0">#FF0000</div>
+            <div class="hextext" id="hextext1">#FF0000</div>
+            <div class="hextext" id="hextext2">#FF0000</div>
+        </div>
+        <div class="disp">
+            <div class="rgbtext" id="rgbtext0">255, 0, 0</div>
+            <div class="rgbtext" id="rgbtext1">255, 0, 0</div>
+            <div class="rgbtext" id="rgbtext2">255, 0, 0</div>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="50" class="slider" id="intensityRange">
+        </div>
+        <div class="disp bold" id="intensity">Shade/Tint Intensity: 50%</div>
+        <div class="disp">
+            <form>
+                <input type="text" id="hex" autocomplete="off" autofocus name="hex" placeholder="#000000">
+            </form>
+        </div>
+        <script>
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                gethex();
+            });
+            var slider;
+            slider = document.getElementById("intensityRange");
+            label = document.getElementById("intensity");
+
+            // Update the current slider value (each time you drag the slider handle)
+            if (slider != null) {
+                slider.oninput = function() {
+                    shadeM = (this.value/100);
+                    updatecolor(hex);
+                    label.innerHTML = "Shade/Tint Intensity: "+ Math.floor(shadeM*100) + "%";
+                    console.log(shadeM);
+                }
+            }
+            changecolor()
+        </script>
+        <div class="disp">
+            <button class="button" onclick="openui()">?</button>
+        </div>
+
+        <div class="help" id="helpuioverlay" data-reveal="0">
+            <div class="help-window" id="helpui" data-reveal="0">
+                <h1 class="tutorial-title">Help</h1>
+                <div class="tutorialrow"><p class="tutorialtext"> Click any of the colored squares to get a random color.</p> </div>
+                <div class="tutorialrow"><p class="tutorialtext"> Change the intensity of the tint and shade with the slider</p> </div>
+                <div class="tutorialrow"><p class="tutorialtext"> (how much they differ from the original hue).</p> </div>
+                <div class="tutorialrow"><p class="tutorialtext"> Input your own hex codes into the text box.</p> </div>
+
+
+                <div class="disp">
+                    <button class="button" onclick="closeui()">X</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
