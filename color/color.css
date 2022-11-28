@@ -163,8 +163,8 @@ input[type=text]:focus {
     opacity: 0;
 }
 .help-window[data-reveal="1"] {
-    background-color: #454545;ol
-    color:#ffffff;
+    background-color: #454545;
+    color: #FFFFFF;
     opacity: 1;
     pointer-events: auto;
     animation-duration: 1s;
