@@ -28,8 +28,80 @@
             <td>Pushes 0 to the top of the stack</td>
         </tr>
         <tr>
+            <td><strong>.increment()</strong></td>
+            <td>Increments the top value of the stack</td>
+        </tr>
+        <tr>
+            <td><strong>.decrement()</strong></td>
+            <td>Decrements the top value of the stack</td>
+        </tr>
+        <tr>
             <td><strong>.pop()</strong></td>
             <td>Pops the top value of the stack</td>
+        </tr>
+        <tr>
+            <td><strong>.add()</strong></td>
+            <td>Pops the top two values of the stack and pushes their sum</td>
+        </tr>
+        <tr>
+            <td><strong>.subtract()</strong></td>
+            <td>Pops the top two values of the stack and pushes their difference (The first is subtracted by the second)</td>
+        </tr>
+        <tr>
+            <td><strong>.multiply()</strong></td>
+            <td>Pops the top two values of the stack and pushes their product</td>
+        </tr>
+        <tr>
+            <td><strong>.divide()</strong></td>
+            <td>Pops the top two values of the stack and pushes the quotient (The first is divided by the second)</td>
+        </tr>
+        <tr>
+            <td><strong>.modulo()</strong></td>
+            <td>Pops the top two values of the stack and pushes their modulus (The remainder of the first divided by the second)</td>
+        </tr>
+        <tr>
+            <td><strong>.duplicate()</strong></td>
+            <td>Duplicates the top value of the stack</td>
+        </tr>
+        <tr>
+            <td><strong>.swap()</strong></td>
+            <td>Swaps the position of the top two values of the stack</td>
+        </tr>
+        <tr>
+            <td><strong>.over()</strong></td>
+            <td>Copies the second value of the stack to the top of the stack</td>
+        </tr>
+        <tr>
+            <td><strong>.reverse()</strong></td>
+            <td>Reverses the stack</td>
+        </tr>
+        <tr>
+            <td><strong>.length()</strong></td>
+            <td>Pushes the stack length</td>
+        </tr>
+        <tr>
+            <td><strong>.print(ascii) and .print(number)</strong></td>
+            <td>Pops the top value of the stack and adds it to the output buffer as either a number or an ascii character</td>
+        </tr>
+        <tr>
+            <td><strong>.redirect(<i>integer</i>)</strong></td>
+            <td>Shifts the pointer by the inputted integer and runs code from there</td>
+        </tr>
+        <tr>
+            <td><strong>.*redirect(<i>integer</i>)</strong></td>
+            <td>Pops the top value of the stack; if that value is 1, redirect by specified integer; otherwise, continue running code</td>
+        </tr>
+        <tr>
+            <td><strong>.equal()</strong></td>
+            <td>Pops the top two values of the stack; if the values are equal, push 1 to the stack; otherwise, push 0</td>
+        </tr>
+        <tr>
+            <td><strong>.not()</strong></td>
+            <td>Pops the top value of the stack; if the value is 0, push 1 to the stack; otherwise, push 0</td>
+        </tr>
+        <tr>
+            <td><strong>.wait(<i>integer</i>)</strong></td>
+            <td>Waits the specified amount of seconds</td>
         </tr>
       </table>
 </body>
