@@ -18,6 +18,20 @@
 </head>
 <body>
     <h1>.stack</h1>
+    <p>All programs must start with <i>/input/</i> and end with <i>/input/</i>. All commands start with . and end with ()</p>
+    <p>Put multiple commands on one line by using ::</p>
+    <p><i>Example: .zero()::.increment()::.pop()</i></p>
+    <p>You can also preset the stack by adding :: to the end of <i>/input/</i> and then putting your values (integers)</p>
+    <p><i>Example: /input/ :: 3 5 2</i></p>
+    <p>For user input, add <i>args</i> as one of your values</p>
+    <p><i>Example: /input/ :: args</i></p>
+    <p>Users then can add values to the end of the command they run in the terminal, <i>python dotstack.py your-file user-values</i> </p>
+    <p><i>Example: python dotstack.py your-file 1 5 3</i></p>
+    <p>... would input the stack</p>
+    <p><i>[1, 5, 3]</i></p>
+    <p>You can also add comments to your code with #</p>
+    <p><i>Example: .pop() # This is a comment, so it wont be ran by the interpreter</i></p>
+    <h1>Commands</h1>
     <table>
         <tr>
             <th>Cmd</th>
@@ -104,4 +118,5 @@
             <td>Waits the specified amount of seconds</td>
         </tr>
       </table>
+      <p><i>Hello World</i> program in .stack (Work In Progress)</p>
 </body>
