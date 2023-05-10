@@ -73,7 +73,9 @@ body {
 }
 .guesses {
     padding: -20px 20px 20px 20px;
+    margin-top: 20px;
     font-size: 21px;
+    overflow: auto;
 }
 
 .guess {

@@ -1,5 +1,5 @@
 let guesscount = 0;
-let arraynum = 0; //random(0,898); 898
+let arraynum = 1; //random(0,898); 898
 let endgame = 0;
 let win = 0;
 let sharehint = [];
