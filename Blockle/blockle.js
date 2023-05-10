@@ -30,8 +30,8 @@ function hint(mode, choicee)
         endgame = 1;
         setTimeout(() => end(mode), 1500);
     }
-    TEXTid = "TEXTg" + toString(guesscount);
-    IMGid = "IMGg" + toString(guesscount);
+    TEXTid = "TEXTg" + guesscount.toString();
+    IMGid = "IMGg" + guesscount.toString();
     /*
     if (guesscount == 1) {
         TEXTid = "TEXTg1";
