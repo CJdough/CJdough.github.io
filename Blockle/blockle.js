@@ -30,6 +30,9 @@ function hint(mode, choicee)
         endgame = 1;
         setTimeout(() => end(mode), 1500);
     }
+    TEXTid = "TEXTg" + toString(guesscount);
+    IMGid = "IMGg" + toString(guesscount);
+    /*
     if (guesscount == 1) {
         TEXTid = "TEXTg1";
         IMGid = "IMGg1";
@@ -69,6 +72,13 @@ function hint(mode, choicee)
     if (guesscount == 10) {
         TEXTid = "TEXTg10";
         IMGid = "IMGg10";
+        if (mode != 2) {
+            endgame = 1;
+            setTimeout(() => end(mode), 1500);
+        }
+    }
+    */
+    if (guesscount == 10) {
         if (mode != 2) {
             endgame = 1;
             setTimeout(() => end(mode), 1500);
