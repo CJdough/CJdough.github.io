@@ -45,9 +45,11 @@ function hint(mode, choicee)
 
     const newGuessDiv = document.createElement('div');
     const guessImg = document.createElement('img');
+    guessImg.classList.add("icon");
     const guessText = document.createTextNode(choicee);
     guessImg.src = icon;
     newGuessDiv.appendChild(guessText);
+    newGuessDiv.classList.add("guess");
     document.getElementById("guessesDiv").appendChild(newGuessDiv);
 }
 
