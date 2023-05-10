@@ -3,7 +3,7 @@ let arraynum = random(0,898); //898
 let endgame = 0;
 let win = 0;
 let sharehint = [];
-document.getElementById("test").innerHTML(ids[arraynum]);
+document.getElementById("test").innerHTML = ids[arraynum];
 
 
 function random(min, max) {
