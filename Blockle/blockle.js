@@ -45,7 +45,7 @@ function hint(mode, choicee)
     newGuessDiv.appendChild(guessText);
     newGuessDiv.classList.add("guess");
     newGuessDiv.classList.add("slide");
-    document.getElementById("guessesDiv").appendChild(newGuessDiv);
+    document.getElementById("guessesDiv").prepend(newGuessDiv);
 }
 
 function check(choice)
