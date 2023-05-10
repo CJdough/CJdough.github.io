@@ -41,10 +41,11 @@ function hint(mode, choicee)
     guessImg.classList.add("icon");
     guessImg.src = icon;
     const guessText = document.createTextNode(choicee);
+    guessText.classList.add("slide");
+    guessImg.classList.add("slideleft");
     newGuessDiv.appendChild(guessImg);
     newGuessDiv.appendChild(guessText);
     newGuessDiv.classList.add("guess");
-    newGuessDiv.classList.add("slide");
     document.getElementById("guessesDiv").prepend(newGuessDiv);
 }
 

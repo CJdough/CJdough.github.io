@@ -105,6 +105,17 @@ body {
       opacity: 1;
     }
 }
+@keyframes slideleft {
+    from {
+      margin-left: -10px;
+      opacity: 0;
+    }
+
+    to {
+      margin-left: 0px;
+      opacity: 1;
+    }
+}
 @keyframes slideout {
     from {
       margin-top: 0px;
