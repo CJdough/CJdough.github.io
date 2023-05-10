@@ -94,7 +94,7 @@ body {
 
 @keyframes slidein {
     from {
-      margin-top: 25px;
+      margin-top: -25px;
       opacity: 0;
     }
 
