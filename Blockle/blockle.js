@@ -32,52 +32,6 @@ function hint(mode, choicee)
     }
     TEXTid = "TEXTg" + guesscount.toString();
     IMGid = "IMGg" + guesscount.toString();
-    /*
-    if (guesscount == 1) {
-        TEXTid = "TEXTg1";
-        IMGid = "IMGg1";
-    }
-    if (guesscount == 2) {
-        TEXTid = "TEXTg2";
-        IMGid = "IMGg2";
-    }
-    if (guesscount == 3) {
-        TEXTid = "TEXTg3";
-        IMGid = "IMGg3";
-    }
-    if (guesscount == 4) {
-        TEXTid = "TEXTg4";
-        IMGid = "IMGg4";
-    }
-    if (guesscount == 5) {
-        TEXTid = "TEXTg5";
-        IMGid = "IMGg5";
-    }
-    if (guesscount == 6) {
-        TEXTid = "TEXTg6";
-        IMGid = "IMGg6";
-    }
-    if (guesscount == 7) {
-        TEXTid = "TEXTg7";
-        IMGid = "IMGg7";
-    }
-    if (guesscount == 8) {
-        TEXTid = "TEXTg8";
-        IMGid = "IMGg8";
-    }
-    if (guesscount == 9) {
-        TEXTid = "TEXTg9";
-        IMGid = "IMGg9";
-    }
-    if (guesscount == 10) {
-        TEXTid = "TEXTg10";
-        IMGid = "IMGg10";
-        if (mode != 2) {
-            endgame = 1;
-            setTimeout(() => end(mode), 1500);
-        }
-    }
-    */
     if (guesscount == 10) {
         if (mode != 2) {
             endgame = 1;
@@ -88,6 +42,13 @@ function hint(mode, choicee)
     document.getElementById(TEXTid).innerHTML = choicee;
     document.getElementById(IMGid).classList.add("slide");
     document.getElementById(TEXTid).classList.add("slide");
+
+    const newGuessDiv = document.createElement('div');
+    const guessImg = document.createElement('img');
+    const guessText = document.createTextNode(choicee);
+    guessImg.src = icon;
+    newGuessDiv.appendChild(guessText);
+    document.getElementById("guessesDiv").appendChild(newGuessDiv);
 }
 
 function check(choice)
