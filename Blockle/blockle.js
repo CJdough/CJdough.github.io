@@ -41,8 +41,6 @@ function hint(mode, choicee)
     }
     document.getElementById(IMGid).src = icon;
     document.getElementById(TEXTid).innerHTML = choicee;
-    document.getElementById(IMGid).classList.add("slide");
-    document.getElementById(TEXTid).classList.add("slide");
 
     const newGuessDiv = document.createElement('div');
     const guessImg = document.createElement('img');
@@ -52,6 +50,7 @@ function hint(mode, choicee)
     newGuessDiv.appendChild(guessImg);
     newGuessDiv.appendChild(guessText);
     newGuessDiv.classList.add("guess");
+    newGuessDiv.classList.add("slide");
     document.getElementById("guessesDiv").appendChild(newGuessDiv);
 }
 
