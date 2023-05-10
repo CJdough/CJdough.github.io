@@ -15,8 +15,6 @@ function random(min, max) {
 function hint(mode, choicee)
 {
     var icon = 0;
-    var TEXTid = 0;
-    var IMGid = 0;
     if (mode == 0) {
         icon = "Blockle/None.png";
         sharehint[guesscount-1] = "⬛";
@@ -31,16 +29,12 @@ function hint(mode, choicee)
         endgame = 1;
         setTimeout(() => end(mode), 1500);
     }
-    TEXTid = "TEXTg" + guesscount.toString();
-    IMGid = "IMGg" + guesscount.toString();
     if (guesscount == 10) {
         if (mode != 2) {
             endgame = 1;
             setTimeout(() => end(mode), 1500);
         }
     }
-    document.getElementById(IMGid).src = icon;
-    document.getElementById(TEXTid).innerHTML = choicee;
 
     const newGuessDiv = document.createElement('div');
     const guessImg = document.createElement('img');
