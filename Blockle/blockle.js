@@ -1,5 +1,5 @@
 let guesscount = 0;
-let arraynum = random(0,898); //898
+let arraynum = 0; //random(0,898); 898
 let endgame = 0;
 let win = 0;
 let sharehint = [];
@@ -47,8 +47,8 @@ function hint(mode, choicee)
     const newGuessDiv = document.createElement('div');
     const guessImg = document.createElement('img');
     guessImg.classList.add("icon");
-    const guessText = document.createTextNode(choicee);
     guessImg.src = icon;
+    const guessText = document.createTextNode(choicee);
     newGuessDiv.appendChild(guessImg);
     newGuessDiv.appendChild(guessText);
     newGuessDiv.classList.add("guess");
@@ -988,4 +988,3 @@ let ids = [
     "potted_azalea_bush",
     "potted_flowering_azalea_bush",
 ];
-document.getElementById("testt").innerHTML = ids[arraynum];
