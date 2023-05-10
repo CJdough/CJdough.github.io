@@ -3,7 +3,7 @@ let arraynum = random(0,898); //898
 let endgame = 0;
 let win = 0;
 let sharehint = [];
-document.getElementById("testt").innerHTML = ids[arraynum];
+
 
 
 function random(min, max) {
@@ -988,3 +988,4 @@ let ids = [
     "potted_azalea_bush",
     "potted_flowering_azalea_bush",
 ];
+document.getElementById("testt").innerHTML = ids[arraynum];
