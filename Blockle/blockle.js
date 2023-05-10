@@ -45,7 +45,6 @@ function hint(mode, choicee)
     document.getElementById(TEXTid).classList.add("slide");
 
     const newGuessDiv = document.createElement('div');
-    document.createImg
     const guessImg = document.createElement('img');
     guessImg.classList.add("icon");
     const guessText = document.createTextNode(choicee);
