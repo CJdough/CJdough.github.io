@@ -93,6 +93,10 @@ body {
     animation-duration: 1s;
     animation-name: slidein;
 }
+.slideleft {
+    animation-duration: 1s;
+    animation-name: slideleft;
+}
 
 @keyframes slidein {
     from {
@@ -106,10 +110,12 @@ body {
 @keyframes slideleft {
     from {
       margin-left: -10px;
+      opacity: 0;
     }
 
     to {
       margin-left: 0px;
+      opacity: 1;
     }
 }
 @keyframes slideout {
