@@ -22,7 +22,6 @@ body {
 .mc {
     color: var(--bgoutline);
     font-size: 30px;
-    float: left;
 }
 .logo {
     width: 10%;
@@ -62,7 +61,8 @@ body {
     width: 100%;
     background-color: var(--bg);
     transition: background-color 2s;
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 .howtoplay {
     margin-top: 6px;
