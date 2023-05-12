@@ -17,7 +17,7 @@ body {
     overflow: hidden;
     transition: background-color 2s, color 2s;
 
-    background-image: "Blockle/minecraft.jpg";
+    background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f2/Dirt_background_BE1.png/revision/latest?cb=20210820093527");
 }
 .mc {
     color: var(--bgoutline);
