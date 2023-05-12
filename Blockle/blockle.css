@@ -64,6 +64,9 @@ body {
     display: flex;
     justify-content: center;
 }
+.choicebox {
+    flex-grow: 1;
+}
 .howtoplay {
     margin-top: 6px;
     padding: 5px;
