@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="techinnov/style.css">
+        <script src="techinnov/script.js"></script>
+    </head>
+    <body>
+
+        <div id="bg-div">
+
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+            <img src="techinnov/cheese-bg.png" class="ambient">
+
+        </div>
+
+        <div id="head-div">
+            <h1>cheese</ul><i>SEARCH</i></h1>
+
+            <form>
+                <input type="text" id="search" placeholder="Enter a cheese type"></input>
+            </form>
+        </div>
+
+        <div id="middle-div">
+            <div id="cheddar" class="cheese-type">
+
+                <img src="techinnov/cheddar.jpg">
+
+                <h2>Cheddar</h2>
+                <p>Cheddar cheese (or simply cheddar) is a natural cheese that is relatively hard, off-white (or orange if colourings such as annatto are added), and sometimes sharp-tasting.</p>
+                <a href="https://en.wikipedia.org/wiki/Cheddar_cheese">Wikipedia</a>
+
+                <h5 class="licence">Image: Flickr - Creative Commons</h5>
+
+            </div>
+            <div id="mozzarella" class="cheese-type">
+                <img src="techinnov/mozzarella.jpg">
+                <h2>Mozzarella</h2>
+                <p>Fresh mozzarella is generally white but when seasoned it turns to a light yellow depending on the animal's diet. Due to its high moisture content, it is traditionally served the day after it is made but can be kept in brine for up to a week or longer when sold in vacuum-sealed packages.</p>
+                <a href="https://en.wikipedia.org/wiki/Mozzarella">Wikipedia</a>
+                <h5 class="licence">Image: pdphoto.org via Picryl.com - Public Domain</h5>
+            </div>
+            <div id="feta" class="cheese-type">
+                <img src="techinnov/feta.jpg">
+                <h2>Feta</h2>
+                <p>Feta (Greek: φέτα, féta) is a Greek brined white cheese made from sheep's milk or from a mixture of sheep and goat's milk. It is soft, with small or no holes, a compact touch, few cuts, and no skin. Crumbly with a slightly grainy texture, it is formed into large blocks and aged in brine. Its flavor is tangy and salty, ranging from mild to sharp.</p>
+                <a href="https://en.wikipedia.org/wiki/Feta">Wikipedia</a>
+                <h5 class="licence">Image: Flickr - Creative Commons</h5>
+            </div>
+            <div id="ricotta" class="cheese-type">
+                <img src="techinnov/ricotta.jpeg">
+                <h2>Ricotta</h2>
+                <p>Ricotta (Italian pronunciation: [riˈkɔtta]) is an Italian whey cheese made from sheep, cow, goat, or Italian water buffalo milk whey left over from the production of other cheeses. Like other whey cheeses, it is made by coagulating the proteins that remain after the casein has been used to make cheese, notably albumin and globulin.</p>
+                <a href="https://en.wikipedia.org/wiki/Ricotta">Wikipedia</a>
+                <h5 class="licence">Image: Prompart, Gratis Graphic - Creative Commons</h5>
+            </div>
+            <div id="parmesan" class="cheese-type">
+                <img src="techinnov/parmesan.jpg">
+                <h2>Parmesan</h2>
+                <p>Parmesan (Italian: Parmigiano Reggiano; Italian pronunciation: [parmiˈdʒaːno redˈdʒaːno]) is an Italian hard, granular cheese produced from cows' milk and aged at least 12 months.</p>
+                <a href="https://en.wikipedia.org/wiki/Parmesan">Wikipedia</a>
+                <h5 class="licence">Image: Flickr - Creative Commons</h5>
+            </div>
+        </div>
+
+
+    </body>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            get_search();
+        });
+    </script>
+</html>
